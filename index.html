@@ -73,7 +73,7 @@
     </section>
     <a-scene id="scene" embedded arjs vr-mode-ui="enabled: false"
         renderer="antialias: true; colorManagement: true; sortObjects: true;">
-        <a-marker preset="hiro">
+        <a-marker preset="hiro" smooth="true">
             <a-entity position="0 0 0" rotation="270 10 0">
                    <a-entity id='theModel' position="2 -0.3 0" rotation="0 0 0" scale="10 10 10"
                     gltf-model="./assets/3d-models/doggy.glb">
@@ -83,6 +83,10 @@
                 <a-entity id='theModel' position="-2 0 0" rotation="0 0 0" scale="0.5 0.5 0.5"
                     gltf-model="./assets/3d-models/kong.glb">
                 </a-entity>
+                 <a-entity position="0 1 0"
+                animation-mixer="clip: *;"
+                gltf-model="src: url(https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/AnimatedMorphSphere/glTF/AnimatedMorphSphere.gltf);">
+                 </a-entity>
 
             </a-entity>
         </a-marker>
