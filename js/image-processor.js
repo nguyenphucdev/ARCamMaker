@@ -1,6 +1,6 @@
 const defaultOptions = {
-    format: 'image/png',
-    quality: 0.95,
+    format: 'image/jpeg',
+    quality: 1.0,
     width: undefined,
     height: undefined,
     Canvas: undefined,
@@ -19,7 +19,7 @@ const getSnap = () =>
         let aScene = document
             .querySelector("a-scene")
             .components.screenshot.getCanvas("perspective");
-        let frame = await captureVideoFrame("video", "png");
+        let frame = await captureVideoFrame("video", "jpeg");
         aScene = await resizeCanvas(aScene, frame.width, frame.height);
         frame = frame.dataUri;
 
